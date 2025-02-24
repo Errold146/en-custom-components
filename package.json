@@ -1,8 +1,10 @@
 {
   "name": "en-custom-components",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.4",
   "type": "module",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "keywords": [
     "react",
     "dev",
@@ -11,7 +13,7 @@
   "license": "MIT",
   "homepage": "https://microweb-cr.app",
   "repository": {
-    "url": "https://TODO...",
+    "url": "https://github.com/Errold146/en-custom-components",
     "type": "git"
   },
   "files": [
@@ -26,6 +28,9 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
     "dev": "npm run storybook",
     "build": "npm run clean && tsc -b && npm run copyfiles",
@@ -34,7 +39,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "clean": "rimraf dist/",
-    "copyfiles": "copyfiles -u 1 src/**/*.css dist/"
+    "copyfiles": "copyfiles -u 1 src/**/*.css dist/",
+    "push:npm": "np"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
@@ -55,6 +61,7 @@
     "eslint-plugin-react-refresh": "^0.4.13",
     "eslint-plugin-storybook": "^0.11.3",
     "globals": "^15.11.0",
+    "np": "^10.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rimraf": "^6.0.1",
